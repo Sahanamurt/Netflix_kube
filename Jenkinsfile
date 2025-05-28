@@ -50,7 +50,7 @@ pipeline {
                 script {
                     sh"""
                     echo "Manoj@8310" | docker login -u manojshetty2021 --password-stdin
-                    docker tag netflix ${DOCKERHUB_USERNAME}/netlix
+                    docker tag netflix ${DOCKERHUB_USERNAME}/netflix
                     docker push ${DOCKERHUB_USERNAME}/netflix
                     """
                 }
