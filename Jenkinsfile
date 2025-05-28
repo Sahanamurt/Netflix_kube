@@ -47,11 +47,11 @@ pipeline {
         }
         stage("push to docker hub") {
             steps {
-                withCredentials([usernamePassword(credentialsId: 'dockerhub-creds', usernameVariable: 'DOCKER_USER', passwordVariable: 'DOCKER_PASS')]) {
-                    sh """
-                    echo "$DOCKER_PASS" | docker login -u "$DOCKER_USER" --password-stdin
-                    docker tag netflix ${DOCKERHUB_USERNAME}/netflix
-                    docker push ${DOCKERHUB_USERNAME}/netflix
+                script {
+                    sh"""
+                    echo "Manoj@8310" | docker login -u manojsheƩy2021 --password-stdin
+                    docker tag neƞlix ${DOCKERHUB_USERNAME}/neƞlix
+                    docker push ${DOCKERHUB_USERNAME}/neƞlix
                     """
                 }
             }
@@ -78,6 +78,7 @@ pipeline {
             }
         }
     }
+    
     post {
         success {
             echo "deployment successful"
