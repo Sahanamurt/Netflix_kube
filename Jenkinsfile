@@ -49,9 +49,9 @@ pipeline {
             steps {
                 script {
                     sh"""
-                    echo "Manoj@8310" | docker login -u manojsheƩy2021 --password-stdin
-                    docker tag neƞlix ${DOCKERHUB_USERNAME}/neƞlix
-                    docker push ${DOCKERHUB_USERNAME}/neƞlix
+                    echo "Manoj@8310" | docker login -u manojshetty2021 --password-stdin
+                    docker tag netflix ${DOCKERHUB_USERNAME}/netlix
+                    docker push ${DOCKERHUB_USERNAME}/netflix
                     """
                 }
             }
